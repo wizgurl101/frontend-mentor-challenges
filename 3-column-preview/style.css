@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap");
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  padding-bottom: 3rem;
+  font-size: 0.8rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+p,
+button {
+  color: hsla(0, 0%, 100%, 0.65);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  margin-top: 10%;
+}
+
+.card .column:nth-child(1) {
+  border-radius: 12px 0 0 12px;
+}
+
+.card .column:nth-child(3) {
+  border-radius: 0 12px 12px 0;
+}
+
+.card .column:nth-child(1),
+.card .column:nth-child(1) button:hover {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.card .column:nth-child(2),
+.card .column:nth-child(2) button:hover {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card .column:nth-child(3),
+.card .column:nth-child(3) button:hover {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 180px;
+}
+
+button {
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  border-radius: 20px;
+  padding: 0.6rem 0 0.7rem 0;
+  margin-right: 3rem;
+}
+
+.card .column:nth-child(1) button {
+  color: hsl(31, 77%, 52%);
+}
+
+.card .column:nth-child(2) button {
+  color: hsl(184, 100%, 22%);
+}
+
+.card .column:nth-child(3) button {
+  color: hsl(179, 100%, 13%);
+}
+
+.card .column:nth-child(1) button:hover,
+.card .column:nth-child(2) button:hover,
+.card .column:nth-child(3) button:hover {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 833px) {
+  .column {
+    width: 130px;
+  }
+  button {
+    padding: 0.5rem 0 0.5rem 0;
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .column {
+    width: 300px;
+  }
+
+  .card .column:nth-child(1) {
+    border-radius: 12px 12px 0 0px;
+  }
+
+  .card .column:nth-child(3) {
+    border-radius: 0 0 12px 12px;
+  }
+
+  button {
+    margin-right: 9rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .column {
+    width: 200px;
+  }
+
+  button {
+    margin-right: 3rem;
+  }
+}
