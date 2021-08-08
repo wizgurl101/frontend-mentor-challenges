@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+//  variables
+$card-width: (
+  mobile: 20.5rem,
+);
+
+$colors: (
+  header: hsl(223, 47%, 23%),
+  body: hsl(224, 23%, 55%),
+  button: hsl(245, 75%, 52%),
+  box: hsl(225, 100%, 98%),
+);
+
+$font_default: "Red Hat Display", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: $font_default;
+}
+
+h2 {
+  color: map-get($colors, header);
+}
+
+.card-text,
+.card-icons-icon p {
+  color: map-get($colors, body);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: map-get($card-width, mobile);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+}
+
+.card-image img {
+  max-width: 100%;
+}
+
+.card-icons {
+  display: flex;
+  flex-direction: row;
+  background-color: map-get($colors, box);
+  margin: 0 1.4rem 0 1.4rem;
+}
+
+.card-text,
+.card-icons {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+}
+.card-button {
+  text-align: center;
+}
+
+button {
+  background-color: map-get($colors, button);
+  border: 1px solid map-get($colors, button);
+  border-radius: 15px;
+  color: white;
+  font-family: $font_default;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.8rem 4rem 0.8rem 4rem;
+}
+
+.card-footer {
+  text-align: center;
+  color: map-get($colors, body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0 1rem 0;
+}
